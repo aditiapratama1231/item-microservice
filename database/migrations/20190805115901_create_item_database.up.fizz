@@ -1,0 +1,8 @@
+create_table("items") {
+    t.Column("id", "integer", {primary: true})
+    t.Column("title", "string")
+    t.Column("description", "text")
+    t.Column("is_finish", "bool")
+    t.Column("deleted_at", "datetime", {"null":true})
+    t.Timestamps()
+}
