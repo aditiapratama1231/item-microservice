@@ -5,16 +5,19 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 
+	pb "github.com/aditiapratama1231/adit-microservice/proto/item"
 	"github.com/aditiapratama1231/item-service/pkg/cmd"
 	transport "github.com/aditiapratama1231/item-service/pkg/transport"
 
 	"github.com/gorilla/handlers"
 	"github.com/joho/godotenv"
+	"google.golang.org/grpc"
 )
 
 func main() {
@@ -24,11 +27,11 @@ func main() {
 	}
 
 	httpPort := os.Getenv("ITEM_HTTP_PORT")
-	// grpcPort := os.Getenv("ITEM_GRPC_PORT")
+	grpcPort := os.Getenv("ITEM_GRPC_PORT")
 
 	var (
 		httpAddr = flag.String("http", ":"+httpPort, "http listen address")
-		// grpcAddr = flag.String("grpc", ":"+grpcPort, "gRPC listen address")
+		grpcAddr = flag.String("grpc", ":"+grpcPort, "gRPC listen address")
 	)
 
 	flag.Parse()
@@ -54,5 +57,25 @@ func main() {
 		}
 	}()
 
+	// Run GRPC Server
+	go func() {
+		grpcListener, err := net.Listen("tcp", *grpcAddr)
+		if err != nil {
+			log.Println("Error connecting grpc server : ", err)
+		}
+
+		log.Println("Item Service (grpc) is listening on port", *grpcAddr)
+
+		defer grpcListener.Close()
+
+		grpcServer := grpc.NewServer()
+
+		itemHandler := transport.ItemGRPCServer(ctx, cmd.Endpoints)
+		pb.RegisterItemsServer(grpcServer, itemHandler)
+
+		if err := grpcServer.Serve(grpcListener); err != nil {
+			log.Println("Failed to Server", err)
+		}
+	}()
 	log.Fatalln(<-errChan)
 }
