@@ -32,7 +32,7 @@ func DecodeGRPCShowItemDetailRequest(ctx context.Context, r interface{}) (interf
 }
 
 func EncodeGRPCShowItemDetailResponse(_ context.Context, r interface{}) (interface{}, error) {
-	resp := r.(payload.GetItemResponse)
+	resp := r.(payload.ItemResponse)
 	data := &pb.Item{}
 	copier.Copy(data, resp.Data)
 	return &pb.ShowItemDetailResponse{
