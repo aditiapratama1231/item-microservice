@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"github.com/aditiapratama1231/item-service/database"
-	"github.com/aditiapratama1231/item-service/pkg/endpoint"
-	"github.com/aditiapratama1231/item-service/pkg/service"
+	"github.com/aditiapratama1231/item-microservice/database"
+	"github.com/aditiapratama1231/item-microservice/pkg/endpoint"
+	"github.com/aditiapratama1231/item-microservice/pkg/service"
 )
 
 var (

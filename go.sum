@@ -47,6 +47,8 @@ github.com/Shopify/sarama v1.23.1/go.mod h1:XLH1GYJnLVE0XCr6KdJGVJRTwY30moWNJ4sE
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
 github.com/aditiapratama1231/adit-microservice v0.0.0-20190805161713-b5ed562326f9 h1:lPgqmfrIQPI6XGA+yAP7xI1tATiywBdK83bXdLR5Y10=
 github.com/aditiapratama1231/adit-microservice v0.0.0-20190805161713-b5ed562326f9/go.mod h1:IQe/kTFeD9gvJdzLd6EwndQLEVYd/EABmIxBbCa0OEU=
+github.com/aditiapratama1231/item-service v0.0.0-20190805163853-f60eb6039b68 h1:WOCnrp70isde5StrkaYUV89Gcz+7xuceMdeacR6oT0A=
+github.com/aditiapratama1231/item-service v0.0.0-20190805163853-f60eb6039b68/go.mod h1:jXT8hTmHiVFpkVPA0e6QdFEnFmBeRxqOmXaqZIPZfrw=
 github.com/aditiapratama1231/supplier-dashboard v0.0.0-20190716105258-a54e190feb9f/go.mod h1:e6WSOPJkvFrJtPdvIq6OjioqeVLT/wYBI6aoPiDt4YE=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
@@ -105,6 +107,7 @@ github.com/gogo/protobuf v1.1.1/go.mod h1:r8qH/GZQm5c6nD/R0oafs1akxWv10x8SbQlK7a
 github.com/gogo/protobuf v1.2.0/go.mod h1:r8qH/GZQm5c6nD/R0oafs1akxWv10x8SbQlK7atdtwQ=
 github.com/gogo/protobuf v1.2.1/go.mod h1:hp+jE20tsWTFYpLwKvXlhS1hjn+gTNwPg2I6zVXpSg4=
 github.com/gogo/protobuf v1.2.2-0.20190730201129-28a6bbf47e48/go.mod h1:SlYgWuQ5SjCEi6WLHjHCa1yvBfUnHcTbrrZtXPKa29o=
+github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b h1:VKtxabqXZkF25pY9ekfRL6a582T4P37/31XEstQ5p58=
 github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b/go.mod h1:SBH7ygxi8pfUlaOkMMuAQtPIUF8ecWP5IEl/CR7VP2Q=
 github.com/golang/mock v1.1.1/go.mod h1:oTYuIxOrZwtPieC+H1uAHpcLFnEyAGVDL/k47Jfbm0A=
 github.com/golang/mock v1.2.0/go.mod h1:oTYuIxOrZwtPieC+H1uAHpcLFnEyAGVDL/k47Jfbm0A=

@@ -3,10 +3,10 @@ package transport
 import (
 	"context"
 
-	"github.com/aditiapratama1231/item-service/pkg/endpoint"
+	"github.com/aditiapratama1231/item-microservice/pkg/endpoint"
 
 	pb "github.com/aditiapratama1231/adit-microservice/proto/item"
-	transport "github.com/aditiapratama1231/item-service/pkg/request/grpc"
+	transport "github.com/aditiapratama1231/item-microservice/pkg/request/grpc"
 	grpctransport "github.com/go-kit/kit/transport/grpc"
 )
 

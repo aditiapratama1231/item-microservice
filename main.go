@@ -12,8 +12,8 @@ import (
 	"syscall"
 
 	pb "github.com/aditiapratama1231/adit-microservice/proto/item"
-	"github.com/aditiapratama1231/item-service/pkg/cmd"
-	transport "github.com/aditiapratama1231/item-service/pkg/transport"
+	"github.com/aditiapratama1231/item-microservice/pkg/cmd"
+	transport "github.com/aditiapratama1231/item-microservice/pkg/transport"
 
 	"github.com/gorilla/handlers"
 	"github.com/joho/godotenv"

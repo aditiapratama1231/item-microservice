@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	pb "github.com/aditiapratama1231/adit-microservice/proto/item"
-	payload "github.com/aditiapratama1231/item-service/pkg/request/payload"
+	payload "github.com/aditiapratama1231/item-microservice/pkg/request/payload"
 
 	"github.com/jinzhu/copier"
 	"github.com/joho/godotenv"

@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	payload "github.com/aditiapratama1231/item-service/pkg/request/payload"
+	payload "github.com/aditiapratama1231/item-microservice/pkg/request/payload"
 )
 
 func DecodeGetItemResponse(ctx context.Context, r *http.Request) (interface{}, error) {

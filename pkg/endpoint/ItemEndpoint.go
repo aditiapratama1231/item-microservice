@@ -3,9 +3,9 @@ package endpoint
 import (
 	"context"
 
-	payload "github.com/aditiapratama1231/item-service/pkg/request/payload"
+	payload "github.com/aditiapratama1231/item-microservice/pkg/request/payload"
 
-	"github.com/aditiapratama1231/item-service/pkg/service"
+	"github.com/aditiapratama1231/item-microservice/pkg/service"
 	"github.com/go-kit/kit/endpoint"
 )
 
