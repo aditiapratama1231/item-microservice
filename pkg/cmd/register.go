@@ -1,20 +1,16 @@
 package cmd
 
 import (
-	"github.com/aditiapratama1231/item-microservice/database"
-	"github.com/aditiapratama1231/item-microservice/pkg/endpoint"
-	"github.com/aditiapratama1231/item-microservice/pkg/service"
+	"bitbucket.org/qasir-id/supplier-user-service/database"
+	"bitbucket.org/qasir-id/supplier-user-service/pkg/endpoint"
+	"bitbucket.org/qasir-id/supplier-user-service/pkg/service"
 )
 
 var (
 	db = database.DBInit()
 
-	srvItem   = service.NewIttemService(db)
+	userSrv   = service.NewUserService(db)
 	Endpoints = endpoint.Endpoints{
-		GetItemsEndpoint:   endpoint.MakeGetItemsEndpoint(srvItem),
-		CreateItemEndpoint: endpoint.MakeCreateItemEndpoint(srvItem),
-		UpdateItemEndpoint: endpoint.MakeUpdateItemEndpoint(srvItem),
-		ShowItemEndpoint:   endpoint.MakeShowItemEndpoint(srvItem),
-		DeleteItemEndpoint: endpoint.MakeDeleteItemEndpoint(srvItem),
+		LoginEndpoint: endpoint.MakeLoginEndpoint(userSrv),
 	}
 )
