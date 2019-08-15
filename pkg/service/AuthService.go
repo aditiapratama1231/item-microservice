@@ -2,28 +2,31 @@ package service
 
 import (
 	"context"
+	"strings"
 
 	"github.com/jinzhu/gorm"
 
 	models "bitbucket.org/qasir-id/supplier-dashboard-service/database/models/user"
 	"bitbucket.org/qasir-id/supplier-user-service/pkg/helper"
 	payload "bitbucket.org/qasir-id/supplier-user-service/pkg/request/payload"
+	jwt "github.com/dgrijalva/jwt-go"
 )
 
-type UserService interface {
+type AuthService interface {
 	LoginUser(context.Context, payload.LoginRequest) (payload.LoginResponse, error)
+	InstropectionToken(context.Context, payload.TokenInstropectionRequest) (payload.TokenInstropectionResponse, error)
 }
 
 var query *gorm.DB
 
-type userService struct{}
+type authService struct{}
 
-func NewUserService(db *gorm.DB) UserService {
+func NewAuthService(db *gorm.DB) AuthService {
 	query = db
-	return userService{}
+	return authService{}
 }
 
-func (userService) LoginUser(ctx context.Context, data payload.LoginRequest) (payload.LoginResponse, error) {
+func (authService) LoginUser(ctx context.Context, data payload.LoginRequest) (payload.LoginResponse, error) {
 	var user models.User
 
 	if query.Where("username = ?", data.Data.Username).Find(&user).RecordNotFound() {
@@ -74,5 +77,40 @@ func (userService) LoginUser(ctx context.Context, data payload.LoginRequest) (pa
 			AccessToken: tokenString,
 			User:        userData,
 		},
+	}, nil
+}
+
+func (authService) InstropectionToken(ctx context.Context, data payload.TokenInstropectionRequest) (payload.TokenInstropectionResponse, error) {
+	token := data.Token
+	tokenString := strings.Replace(token, "Bearer ", "", -1)
+
+	if token == "" {
+		return payload.TokenInstropectionResponse{
+			Error:      "invalid_request",
+			Message:    "Missing Authorization Header",
+			StatusCode: 400,
+		}, nil
+	}
+
+	claims := &helper.TokenClaim{}
+
+	tkn, _ := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
+		return helper.JWT_SIGNATURE_KEY, nil
+	})
+
+	if !tkn.Valid || !strings.Contains(token, "Bearer") {
+		return payload.TokenInstropectionResponse{
+			Error:      "invalid_request",
+			Message:    "Token Invalid",
+			StatusCode: 403,
+		}, nil
+	}
+
+	return payload.TokenInstropectionResponse{
+		Activate: true,
+		Issuer:   claims.Issuer,
+		Exp:      claims.ExpiresAt,
+		UserID:   claims.UserID,
+		Sub:      claims.Subject,
 	}, nil
 }

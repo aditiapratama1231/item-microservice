@@ -9,10 +9,18 @@ import (
 	"github.com/go-kit/kit/endpoint"
 )
 
-func MakeLoginEndpoint(srv service.UserService) endpoint.Endpoint {
+func MakeLoginEndpoint(srv service.AuthService) endpoint.Endpoint {
 	return func(ctx context.Context, request interface{}) (interface{}, error) {
 		req := request.(payload.LoginRequest)
 		d, err := srv.LoginUser(ctx, req)
+		return d, err
+	}
+}
+
+func MakeTokenInstropectionEndpoint(srv service.AuthService) endpoint.Endpoint {
+	return func(ctx context.Context, request interface{}) (interface{}, error) {
+		req := request.(payload.TokenInstropectionRequest)
+		d, err := srv.InstropectionToken(ctx, req)
 		return d, err
 	}
 }

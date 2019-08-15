@@ -15,3 +15,13 @@ func DecodeLoginRequest(ctx context.Context, r *http.Request) (interface{}, erro
 	fmt.Println(req)
 	return req, err
 }
+
+func DecodeTokenInstropectionRequest(ctx context.Context, r *http.Request) (interface{}, error) {
+	var req payload.TokenInstropectionRequest
+
+	req = payload.TokenInstropectionRequest{
+		Token: r.Header.Get("Authorization"),
+	}
+
+	return req, nil
+}

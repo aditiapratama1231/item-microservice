@@ -22,7 +22,14 @@ func NewHTTPServer(ctx context.Context, endpoints endpoint.Endpoints) http.Handl
 		request.EncodeResponse,
 	)
 
+	tokenInstropectionHandler := httptransport.NewServer(
+		endpoints.TokenInstropection,
+		request.DecodeTokenInstropectionRequest,
+		request.EncodeInstropectionResponse,
+	)
+
 	user.Handle("/login", loginHandler).Methods("POST")
+	user.Handle("/token-instropection", tokenInstropectionHandler).Methods("GET")
 	return user
 }
 

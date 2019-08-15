@@ -23,3 +23,18 @@ type LoginResponse struct {
 
 type RegisterAttributes struct {
 }
+
+type TokenInstropectionRequest struct {
+	Token string `json:"token"`
+}
+
+type TokenInstropectionResponse struct {
+	Issuer     string `json:"issuer,omitempty"`
+	Activate   bool   `json:"active,omitempty"`
+	Sub        string `json:"sub,omitempty"`
+	Exp        int64  `json:"exp,omitempty"`
+	UserID     int64  `json:"user_id,omitempty"`
+	Error      string `json:"error,omitempty"`
+	Message    string `json:"message,omitempty"`
+	StatusCode int64  `json:"status_code,omitempty"`
+}

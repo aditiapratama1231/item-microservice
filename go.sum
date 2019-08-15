@@ -13,6 +13,8 @@ bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190812084525-642b2396
 bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190812084525-642b2396ab3a/go.mod h1:5W8WUosuh6IOSR+pKGk/KQlW/aO9Y1nG9YzlrZZyTsM=
 bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190814142304-5a41097ee095 h1:2j8OxNyyYBsX8aWKPg73TJVGAq9U7gRbAdhD2K4dJgo=
 bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190814142304-5a41097ee095/go.mod h1:5W8WUosuh6IOSR+pKGk/KQlW/aO9Y1nG9YzlrZZyTsM=
+bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190815130551-a58253b5da91 h1:6sUEDF/q9OADILTlseX70U43hEvkmAINtA9DSZn5wBA=
+bitbucket.org/qasir-id/supplier-dashboard-service v0.0.0-20190815130551-a58253b5da91/go.mod h1:5W8WUosuh6IOSR+pKGk/KQlW/aO9Y1nG9YzlrZZyTsM=
 bitbucket.org/qasir-id/supplier-inventory-service v0.0.0-20190718104631-b15eb313a509/go.mod h1:bbxSMaVqkRhLBd3C1EA5hr9dvGLH0TIdwSmTywVlAtk=
 bitbucket.org/qasir-id/supplier-inventory-service v0.0.0-20190718162824-5ba7a5d1a1ae/go.mod h1:bbxSMaVqkRhLBd3C1EA5hr9dvGLH0TIdwSmTywVlAtk=
 bitbucket.org/qasir-id/supplier-inventory-service v0.0.0-20190722082336-530e17a9cfff/go.mod h1:k2rTMWnn3stTuajlvnIfgV7wGtYHjHOJ1PLWQewkCyY=
@@ -51,6 +53,7 @@ cloud.google.com/go v0.42.0/go.mod h1:BOSR3VbTLkk6FDC/TcffxP4NF/FFBGA5ku+jvKOP7p
 cloud.google.com/go v0.43.0 h1:banaiRPAM8kUVYneOSkhgcDsLzEvL25FinuiSZaH/2w=
 cloud.google.com/go v0.43.0/go.mod h1:BOSR3VbTLkk6FDC/TcffxP4NF/FFBGA5ku+jvKOP7pg=
 cloud.google.com/go v0.44.1/go.mod h1:iSa0KzasP4Uvy3f1mN/7PiObzGgflwredwwASm/v6AU=
+cloud.google.com/go v0.44.3 h1:0sMegbmn/8uTwpNkB0q9cLEpZ2W5a6kl+wtBQgPWBJQ=
 cloud.google.com/go v0.44.3/go.mod h1:60680Gw3Yr4ikxnPRS/oxxkBccT6SA1yMk63TGekxKY=
 cloud.google.com/go/datastore v1.0.0/go.mod h1:LXYbyblFSglQ5pkeyhO+Qmw7ukd3C+pD7TKLgZqpHYE=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
@@ -100,6 +103,7 @@ github.com/denisenkom/go-mssqldb v0.0.0-20190715232110-2b613d287457/go.mod h1:zA
 github.com/denisenkom/go-mssqldb v0.0.0-20190720212816-23f0cad53f5c/go.mod h1:zAg7JM8CkOJ43xKXIj7eRO9kmWm/TW578qo+oDO6tuM=
 github.com/denisenkom/go-mssqldb v0.0.0-20190724012636-11b2859924c1 h1:vHTzcl17WBhVXW/KIk2wAoWva7w5WhdNsZtw4caVZZI=
 github.com/denisenkom/go-mssqldb v0.0.0-20190724012636-11b2859924c1/go.mod h1:uU0N10vx1abI4qeVe79CxepBP6PPREVTgMS5Gx6/mOk=
+github.com/denisenkom/go-mssqldb v0.0.0-20190806190131-db2462fef53b h1:C8eKel5CV265bq4KKOvyMKyNK4NPPr1mImhqm8xcK7k=
 github.com/denisenkom/go-mssqldb v0.0.0-20190806190131-db2462fef53b/go.mod h1:uU0N10vx1abI4qeVe79CxepBP6PPREVTgMS5Gx6/mOk=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=
 github.com/dgrijalva/jwt-go v3.2.0+incompatible/go.mod h1:E3ru+11k8xSBh+hMPgOLZmtrrCbhqsmaPHjLKYnJCaQ=
@@ -447,6 +451,7 @@ golang.org/x/tools v0.0.0-20190731214159-1e85ed8060aa/go.mod h1:jcCCGcm9btYwXyDq
 golang.org/x/tools v0.0.0-20190802220118-1d1727260058/go.mod h1:jcCCGcm9btYwXyDqrUWc6MKQKKGJCWEQ3AfLSRIbEuI=
 golang.org/x/tools v0.0.0-20190808195139-e713427fea3f/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/tools v0.0.0-20190813214729-9dba7caff850/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
+golang.org/x/tools v0.0.0-20190814235402-ea4142463bf3/go.mod h1:b+2E5dAYhXwXZwtnZ6UAqBI28+e2cm9otk0dWdXHAEo=
 golang.org/x/xerrors v0.0.0-20190717185122-a985d3407aa7/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
 google.golang.org/api v0.3.1/go.mod h1:6wY9I6uQWHQ8EM57III9mq/AjF+i8G65rmVagqKMtkk=
 google.golang.org/api v0.4.0/go.mod h1:8k5glujaEP+g9n7WNsDg8QP6cUVNI86fCNMcbazEtwE=

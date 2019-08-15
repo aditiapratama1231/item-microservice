@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"golang.org/x/crypto/bcrypt"
-	
-	jwt "github.com/dgrijalva/jwt-go"
+
 	models "bitbucket.org/qasir-id/supplier-dashboard-service/database/models/user"
+	jwt "github.com/dgrijalva/jwt-go"
 )
 
 var APPLICATION_NAME = "https://qasir.id"
@@ -60,3 +60,15 @@ func GenerateJWT(user models.User) (string, error) {
 
 	return tokenString, err
 }
+
+// func ValidateJWT(jwtToken string) (string, error) {
+// 	claims := TokenClaim{}
+
+// 	tkn, err := jwt.ParseWithClaims(jwtToken, claims, func(token *jwt.Token) (interface{}, error) {
+// 		return JWT_SIGNATURE_KEY, nil
+// 	})
+
+// 	if err != nil {
+
+// 	}
+// }

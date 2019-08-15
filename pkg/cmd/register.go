@@ -9,8 +9,9 @@ import (
 var (
 	db = database.DBInit()
 
-	userSrv   = service.NewUserService(db)
+	authSrv   = service.NewAuthService(db)
 	Endpoints = endpoint.Endpoints{
-		LoginEndpoint: endpoint.MakeLoginEndpoint(userSrv),
+		LoginEndpoint:      endpoint.MakeLoginEndpoint(authSrv),
+		TokenInstropection: endpoint.MakeTokenInstropectionEndpoint(authSrv),
 	}
 )
