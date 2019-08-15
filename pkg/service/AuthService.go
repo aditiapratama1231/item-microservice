@@ -5,8 +5,8 @@ import (
 
 	"github.com/jinzhu/gorm"
 
-	"bitbucket.org/qasir-id/supplier-user-service/pkg/helper"
 	models "bitbucket.org/qasir-id/supplier-dashboard-service/database/models/user"
+	"bitbucket.org/qasir-id/supplier-user-service/pkg/helper"
 	payload "bitbucket.org/qasir-id/supplier-user-service/pkg/request/payload"
 )
 
@@ -55,15 +55,15 @@ func (userService) LoginUser(ctx context.Context, data payload.LoginRequest) (pa
 	userData := payload.User{
 		ID:         int64(user.ID),
 		MerchantID: user.MerchantID,
-		// OutletID: user.,
-		Username:  user.Username,
-		Email:     user.Email,
-		FirstName: user.FirstName,
-		LastName:  user.LastName,
-		Title:     user.Title,
-		Image:     user.Image,
-		Level:     user.Level,
-		Status:    user.Status,
+		OutletID:   user.OutletID,
+		Username:   user.Username,
+		Email:      user.Email,
+		FirstName:  user.FirstName,
+		LastName:   user.LastName,
+		Title:      user.Title,
+		Image:      user.Image,
+		Level:      user.Level,
+		Status:     user.Status,
 	}
 
 	return payload.LoginResponse{
